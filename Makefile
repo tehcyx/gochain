@@ -5,10 +5,10 @@ setup:
 	go get github.com/gorilla/mux
 	go get github.com/tehcyx/gochain/blockchain
 
-buildgo: setup
+buildgo:
 	go build -i
 
-builddocker: setup
+builddocker:
 	CGO_ENABLED=0 GOOS=linux go build -ldflags "-s" -a -installsuffix cgo -o gochaindocker
 	docker build -t blockchain .
 

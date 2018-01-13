@@ -2,6 +2,8 @@
 educational implementation of a simple blockchain in go
 
 ## How build/run
+
+No matter if you want to run it from docker or on your machine with the executable, run make setup first to install dependencies.
 ### For development on the machine (no docker)
 If you want to run only one node on your machine, use the `make buildgo` to create the executable called `gochain`, run with `./gochain` from the folder and connect to the exposed endpoints via your browser.
 
