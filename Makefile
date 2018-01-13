@@ -15,6 +15,12 @@ builddocker:
 run:
 	docker run --rm -p 8080:8080 blockchain
 
+test:
+	go test ./...
+
+cover:
+	go test ./.. -cover
+
 scenario:
 	docker network create gochain || true
 	docker run --rm -p 8080:8080 -d --net gochain --name blockchain1 --link blockchain2 blockchain

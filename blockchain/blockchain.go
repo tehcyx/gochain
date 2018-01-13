@@ -112,7 +112,7 @@ func (c *Blockchain) ValidProof(lastProof int64, proof int64) bool {
 }
 
 func (c Blockchain) String() string {
-	return fmt.Sprintf("Chain: % +v,\n Current Transactions: % +v", c.Chain, c.CurrentTransactions)
+	return fmt.Sprintf("Chain: % +v,\n Current Transactions: % +v,\n Nodes: % +v", c.Chain, c.CurrentTransactions, c.Nodes)
 }
 
 func (b Block) String() string {
