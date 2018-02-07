@@ -1,7 +1,7 @@
 # gochain
 educational implementation of a simple blockchain in go
 
-## How build/run
+## How to build/run
 
 No matter if you want to run it from docker or on your machine with the executable, run make setup first to install dependencies.
 ### For development on the machine (no docker)

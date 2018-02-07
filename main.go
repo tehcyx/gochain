@@ -30,7 +30,7 @@ type node struct {
 
 func main() {
 	if len(b.Chain) != 1 {
-		log.Fatal("Error occured initializing the chain")
+		log.Fatal("Error occurred initializing the chain")
 	}
 
 	var err error

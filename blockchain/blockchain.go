@@ -28,7 +28,7 @@ type Block struct {
 // Transaction struct
 type Transaction struct {
 	Sender    string  `json:"sender"`
-	Recepient string  `json:"recipient"`
+	Recipient string  `json:"recipient"`
 	Amount    float64 `json:"amount"`
 }
 
@@ -70,7 +70,7 @@ func (c *Blockchain) NewBlock(proof int64, previousHash string) *Block {
 func (c *Blockchain) NewTransaction(sender, recipient string, amount float64) int {
 	t := new(Transaction)
 	t.Sender = sender
-	t.Recepient = recipient
+	t.Recipient = recipient
 	t.Amount = amount
 
 	c.CurrentTransactions = append(c.CurrentTransactions, *t)
