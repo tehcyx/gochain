@@ -120,5 +120,5 @@ func (b Block) String() string {
 }
 
 func (t Transaction) String() string {
-	return fmt.Sprintf("Sender: %s,\n Recipient: %s,\n Amount: %f", t.Sender, t.Recepient, t.Amount)
+	return fmt.Sprintf("Sender: %s,\n Recipient: %s,\n Amount: %f", t.Sender, t.Recipient, t.Amount)
 }
