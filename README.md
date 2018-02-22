@@ -5,13 +5,13 @@ educational implementation of a simple blockchain in go
 
 No matter if you want to run it from docker or on your machine with the executable, run make setup first to install dependencies.
 ### For development on the machine (no docker)
-If you want to run only one node on your machine, use the `make buildgo` to create the executable called `gochain`, run with `./gochain` from the folder and connect to the exposed endpoints via your browser.
+If you want to run only one node on your machine, use the `make` to create the executable called `app`, run with `./bin/app` from the folder and connect to the exposed endpoints via your browser.
 
 ### For development on the machine (docker)
-If you want to run only one node on your machine inside a docker container, run the `make` command and then `make run`. This will start the docker container and bind the port locally to :8080 from the exposed docker port.
+If you want to run only one node on your machine inside a docker container, run the `make docker` command and then `make run`. This will start the docker container and bind the port locally to :8080 from the exposed docker port.
 
 ### Run two nodes via docker on one machine
-If you want to run two nodes on your machine (both inside docker), run the `make` command and then use `make scenario` to start both. They are now both exposed on port :8080 and :8081 and you can access them both from your browser. The command will also setup a docker network named gochain and name the containers (blockchain1 and blockchain2) so for registering the node you use one of those hostnames.
+If you want to run two nodes on your machine (both inside docker), run the `make docker` command and then use `make scenario` to start both. They are now both exposed on port :8080 and :8081 and you can access them both from your browser. The command will also setup a docker network named gochain and name the containers (blockchain1 and blockchain2) so for registering the node you use one of those hostnames.
 
 ## Exposed API
 Running the containers you will have access to this API via your browser
