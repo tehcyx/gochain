@@ -104,7 +104,7 @@ func transactionsNewHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Check that the required fields are in the POST'ed data
-	if !(t.Sender != "" && t.Recepient != "" && t.Amount > 0.0) {
+	if !(t.Sender != "" && t.Recipient != "" && t.Amount > 0.0) {
 		var response = map[string]interface{}{
 			"message":     "Error: Invalid request payload",
 			"status_code": http.StatusBadRequest,
@@ -112,7 +112,7 @@ func transactionsNewHandler(w http.ResponseWriter, r *http.Request) {
 		respondWithJSON(w, http.StatusBadRequest, response)
 		return
 	}
-	blockNumber := b.NewTransaction(t.Sender, t.Recepient, t.Amount)
+	blockNumber := b.NewTransaction(t.Sender, t.Recipient, t.Amount)
 	var response = map[string]interface{}{
 		"message":     fmt.Sprintf("Success: Transaction will be added to block %d", blockNumber),
 		"status_code": http.StatusCreated,

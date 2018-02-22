@@ -1,5 +1,5 @@
 FROM scratch
 
-ADD gochaindocker /
+ADD bin/appdocker /
 
-CMD ["/gochaindocker"]
+CMD ["/appdocker"]
